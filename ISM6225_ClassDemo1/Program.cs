@@ -8,14 +8,18 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
-         Console.WriteLine("Hello World");
+         Console.WriteLine("Please provide your input");
 
-            int x;
-            int y;
-            x = 3;
-            y = 4;
-            //print the output of x + y
-            Console.WriteLine(x + y);
+            string userInputToCheck = Console.ReadLine();
+
+            try
+            {
+                int inputNumberChecked = Convert.ToInt32(userInputToCheck);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
